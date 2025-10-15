@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1fal5qmr3ssn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqns4"]
+size = Vector2(13, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvf6m"]
+size = Vector2(10, 14)
+
+[node name="enemigoAnimated" type="CharacterBody2D"]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hqns4")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_bvf6m")

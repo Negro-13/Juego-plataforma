@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg38npgd2ewt2"]
+
+[ext_resource type="Script" uid="uid://b7n5lri8ytehu" path="res://menus/opciones.gd" id="1_uxvq5"]
+[ext_resource type="FontFile" uid="uid://biqhm71prdgus" path="res://assets/fonts/Daydream DEMO.otf" id="2_7i6bo"]
+
+[node name="Menu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_uxvq5")
+metadata/_edit_vertical_guides_ = [56.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20871013, 0.20871016, 0.20871013, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.5
+offset_top = -105.5
+offset_right = 190.5
+offset_bottom = 105.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Volumen" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7i6bo")
+disabled = true
+text = "Volumen"
+alignment = 0
+
+[node name="Resolucion" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7i6bo")
+disabled = true
+text = "Resolucion"
+alignment = 0
+
+[node name="Controles" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7i6bo")
+text = "Controles"
+alignment = 0
+
+[node name="Atras" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7i6bo")
+text = "Atras"
+alignment = 0
+
+[connection signal="pressed" from="VBoxContainer/Volumen" to="." method="_on_volumen_pressed"]
+[connection signal="pressed" from="VBoxContainer/Resolucion" to="." method="_on_resolucion_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controles" to="." method="_on_controles_pressed"]
+[connection signal="pressed" from="VBoxContainer/Atras" to="." method="_on_atras_pressed"]

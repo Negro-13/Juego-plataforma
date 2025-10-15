@@ -1,6 +1,7 @@
 extends Area2D
-const DIALOGO_1 = preload("res://dialogos/dialogo 1.dialogue")
+const DIALOGO_1 = preload("res://dialogos/Dialogos text/dialogo 1.dialogue")
 var is_player_close = false
+
 
 
 func _ready():
